@@ -1,67 +1,197 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
     <title>Epic Games</title>
-</head>
-<body>
+  </head>
+  <body>
     <div class="main-container">
-        <!-- header-section -->
-        <div class="header-container">
-            <header>
-                <button class="logo-btn">
-                      <svg class="logo-svg" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="height: 2rem; width: 2rem; color:#ffffff">
-                        <path d="M11.226 8.12V6.288c0-.292-.137-.427-.42-.427h-.463v2.685h.463c.284 0 .42-.135.42-.426m-1.502 6.5-.252.628h.501z"></path>
-                        <path fill-rule="evenodd" d="M5.278 2.5h13.445c1.103 0 1.505.401 1.505 1.488V17.23c0 .17-.03.477-.086.609a.9.9 0 0 1-.21.334c-.106.099-.29.202-.378.242l-7.128 3a1.1 1.1 0 0 1-.851 0l-7.127-3a1.7 1.7 0 0 1-.379-.241.9.9 0 0 1-.21-.335c-.055-.131-.086-.438-.086-.608V3.988c0-1.087.403-1.488 1.505-1.488m8.707 2.383h-1.126v7.285h1.126zm-.414 9.027h-.654l-.534.855-.532-.855h-.655v2.208h.607v-1.262l.568.858h.013l.571-.864v1.268h.616zm-2.587-9.027H9.218v7.286h1.125V9.525h.641c.915 0 1.368-.447 1.368-1.353V6.236c0-.906-.453-1.353-1.368-1.353m-2.33 0H6.15v7.286h2.524v-1.01H7.276V8.963H8.6v-1.01H7.276v-2.06h1.377zM7.86 16.067q.243-.098.421-.243v-.994H7.255v.45h.44v.267a.64.64 0 0 1-.357.091.6.6 0 0 1-.436-.172.6.6 0 0 1-.126-.194.7.7 0 0 1-.045-.246v-.006a.63.63 0 0 1 .166-.429.54.54 0 0 1 .405-.177q.166 0 .292.054a1 1 0 0 1 .248.154l.363-.431a1.4 1.4 0 0 0-.394-.237 1.4 1.4 0 0 0-.512-.085q-.26 0-.48.088a1.2 1.2 0 0 0-.382.245q-.16.156-.25.364-.09.209-.091.451v.007q0 .25.092.458.093.21.256.362.162.151.384.236.223.085.484.085.306 0 .549-.098m1.57-2.173-.952 2.224h.652l.16-.394h.861l.164.394h.663l-.951-2.224zm5.273 4.686.013-.018.004-.023a.06.06 0 0 0-.017-.041.05.05 0 0 0-.04-.017H9.346a.06.06 0 0 0-.041.017l-.013.018-.005.023a.06.06 0 0 0 .018.041q.007.008.018.012l2.58 1.095a.23.23 0 0 0 .181 0l2.6-1.095zm-.719-2.462h1.813v-.52h-1.2v-.35h1.072v-.483h-1.072v-.334h1.184v-.52h-1.796zm.594-9.945v4.705c0 .906.453 1.353 1.368 1.353h.557c.915 0 1.367-.448 1.367-1.353V9.18h-1.104v1.645c0 .291-.137.426-.42.426h-.21c-.295 0-.432-.135-.432-.426v-4.6c0-.292.136-.427.431-.427h.19c.283 0 .42.135.42.426V7.65h1.104V6.163c0-.906-.442-1.343-1.357-1.343h-.547c-.914 0-1.367.448-1.367 1.353m3.27 9.569a.7.7 0 0 0 .065-.303v-.007a.53.53 0 0 0-.223-.458 1 1 0 0 0-.264-.133 3 3 0 0 0-.346-.097 2 2 0 0 1-.19-.049 1 1 0 0 1-.118-.047.16.16 0 0 1-.061-.052.12.12 0 0 1-.017-.066v-.006q0-.06.055-.101a.3.3 0 0 1 .168-.041q.15 0 .31.055.162.055.315.163l.31-.432a1.3 1.3 0 0 0-.407-.22q-.225-.075-.513-.074-.201 0-.36.052a.8.8 0 0 0-.273.147.63.63 0 0 0-.232.508v.007a.6.6 0 0 0 .066.285q.066.115.179.192.113.078.267.127.152.048.331.09.115.025.187.048a.6.6 0 0 1 .115.05.2.2 0 0 1 .059.051q.016.027.016.062v.006a.12.12 0 0 1-.066.112.4.4 0 0 1-.19.04q-.389 0-.724-.266l-.345.407q.209.183.477.275.27.091.57.091a1.3 1.3 0 0 0 .37-.049.8.8 0 0 0 .285-.142.7.7 0 0 0 .183-.225" clip-rule="evenodd"></path>
-                      </svg>  
-                      <svg class="down-arrow-svg" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="height: .75rem; width: .75rem; color:#ffffff">
-                        <path fill-rule="evenodd" d="M19.53 8.97a.75.75 0 0 1 0 1.06L12 17.56l-7.53-7.53a.75.75 0 1 1 1.06-1.06L12 15.44l6.47-6.47a.75.75 0 0 1 1.06 0" clip-rule="evenodd"></path>
-                      </svg>
-                </button>
-                <nav>
-                    <img class="store-img" src="	https://cms-assets.unrealengine.com/AVzjeqAbLRKi3W5jq0CAvz/cmb81xhnx3wl407o5wzb06x28" alt="store-link-image">
-                    <div class="tab-container">
-                        <span class="support-text">Support</span>
-                        <span class="support-text">Distribute
-                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="height: .75rem; width:.75rem;color:#ffffff;margin-left:4px">
-                                <path fill-rule="evenodd" d="M19.53 8.97a.75.75 0 0 1 0 1.06L12 17.56l-7.53-7.53a.75.75 0 1 1 1.06-1.06L12 15.44l6.47-6.47a.75.75 0 0 1 1.06 0" clip-rule="evenodd"></path>
-                            </svg>
-                        </span>
-                    </div>
-                    <div class="right-container">
-                        <div class="toolbar">
-                            <button class="lang-svg">
-                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="inline-size: 1.5rem;block-size :1.5rem;color:#ffffff;">
-                                    <path fill-rule="evenodd" d="M3.784 11.25H8.01c.065-2.256.423-4.31.985-5.869.166-.457.352-.882.561-1.263a8.26 8.26 0 0 0-5.773 7.132m8.216-9c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25m0 1.5c-.146 0-.383.08-.695.444-.309.362-.62.93-.898 1.697-.494 1.368-.83 3.243-.896 5.359h4.978c-.066-2.116-.402-3.991-.896-5.36-.277-.766-.59-1.334-.898-1.696-.312-.364-.55-.444-.695-.444m3.99 7.5c-.066-2.256-.424-4.31-.986-5.869a9 9 0 0 0-.561-1.263 8.26 8.26 0 0 1 5.773 7.132zm-1.501 1.5H9.51c.065 2.116.402 3.991.896 5.36.277.766.59 1.334.898 1.696.312.364.55.444.695.444.146 0 .383-.08.695-.444.309-.362.62-.93.898-1.697.494-1.368.83-3.243.896-5.359m-.046 7.132a9 9 0 0 0 .56-1.263c.563-1.559.92-3.613.986-5.869h4.227a8.26 8.26 0 0 1-5.773 7.132m-4.886 0a9 9 0 0 1-.56-1.263c-.563-1.559-.92-3.613-.986-5.869H3.784a8.26 8.26 0 0 0 5.773 7.132" clip-rule="evenodd"></path>
-                                </svg>
-                            </button>
-                            <button class="sign-btn right-btn-common">Sign in</button>
-                        </div>
-                        <button class="right-btn-common install-btn ">
-                            <span class="max-lap">Install</span>
-                            <span class="min-lap">Download</span>
-                        </button>
-                        <button class="mob-menu mob-none">
-                        <svg class="menu-svg" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="height: 1.5rem; width: 1.5rem; color:#ffffff">
-                            <path fill-rule="evenodd" d="M2.25 5A.75.75 0 0 1 3 4.25h18a.75.75 0 0 1 0 1.5H3A.75.75 0 0 1 2.25 5m0 7a.75.75 0 0 1 .75-.75h18a.75.75 0 0 1 0 1.5H3a.75.75 0 0 1-.75-.75m0 7a.75.75 0 0 1 .75-.75h18a.75.75 0 0 1 0 1.5H3a.75.75 0 0 1-.75-.75" clip-rule="evenodd"></path>
-                        </svg>
-                    </button>
-                    </div>
-                </nav>   
-            </header>
-        </div>
-
-        <main>
-            <div class="search-section-container">
-
+      <!-- header-section  -->
+      <header class="header-container">
+        <button class="logo-btn">
+          <svg
+            class="logo-svg"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M11.226 8.12V6.288c0-.292-.137-.427-.42-.427h-.463v2.685h.463c.284 0 .42-.135.42-.426m-1.502 6.5-.252.628h.501z"
+            ></path>
+            <path
+              fill-rule="evenodd"
+              d="M5.278 2.5h13.445c1.103 0 1.505.401 1.505 1.488V17.23c0 .17-.03.477-.086.609a.9.9 0 0 1-.21.334c-.106.099-.29.202-.378.242l-7.128 3a1.1 1.1 0 0 1-.851 0l-7.127-3a1.7 1.7 0 0 1-.379-.241.9.9 0 0 1-.21-.335c-.055-.131-.086-.438-.086-.608V3.988c0-1.087.403-1.488 1.505-1.488m8.707 2.383h-1.126v7.285h1.126zm-.414 9.027h-.654l-.534.855-.532-.855h-.655v2.208h.607v-1.262l.568.858h.013l.571-.864v1.268h.616zm-2.587-9.027H9.218v7.286h1.125V9.525h.641c.915 0 1.368-.447 1.368-1.353V6.236c0-.906-.453-1.353-1.368-1.353m-2.33 0H6.15v7.286h2.524v-1.01H7.276V8.963H8.6v-1.01H7.276v-2.06h1.377zM7.86 16.067q.243-.098.421-.243v-.994H7.255v.45h.44v.267a.64.64 0 0 1-.357.091.6.6 0 0 1-.436-.172.6.6 0 0 1-.126-.194.7.7 0 0 1-.045-.246v-.006a.63.63 0 0 1 .166-.429.54.54 0 0 1 .405-.177q.166 0 .292.054a1 1 0 0 1 .248.154l.363-.431a1.4 1.4 0 0 0-.394-.237 1.4 1.4 0 0 0-.512-.085q-.26 0-.48.088a1.2 1.2 0 0 0-.382.245q-.16.156-.25.364-.09.209-.091.451v.007q0 .25.092.458.093.21.256.362.162.151.384.236.223.085.484.085.306 0 .549-.098m1.57-2.173-.952 2.224h.652l.16-.394h.861l.164.394h.663l-.951-2.224zm5.273 4.686.013-.018.004-.023a.06.06 0 0 0-.017-.041.05.05 0 0 0-.04-.017H9.346a.06.06 0 0 0-.041.017l-.013.018-.005.023a.06.06 0 0 0 .018.041q.007.008.018.012l2.58 1.095a.23.23 0 0 0 .181 0l2.6-1.095zm-.719-2.462h1.813v-.52h-1.2v-.35h1.072v-.483h-1.072v-.334h1.184v-.52h-1.796zm.594-9.945v4.705c0 .906.453 1.353 1.368 1.353h.557c.915 0 1.367-.448 1.367-1.353V9.18h-1.104v1.645c0 .291-.137.426-.42.426h-.21c-.295 0-.432-.135-.432-.426v-4.6c0-.292.136-.427.431-.427h.19c.283 0 .42.135.42.426V7.65h1.104V6.163c0-.906-.442-1.343-1.357-1.343h-.547c-.914 0-1.367.448-1.367 1.353m3.27 9.569a.7.7 0 0 0 .065-.303v-.007a.53.53 0 0 0-.223-.458 1 1 0 0 0-.264-.133 3 3 0 0 0-.346-.097 2 2 0 0 1-.19-.049 1 1 0 0 1-.118-.047.16.16 0 0 1-.061-.052.12.12 0 0 1-.017-.066v-.006q0-.06.055-.101a.3.3 0 0 1 .168-.041q.15 0 .31.055.162.055.315.163l.31-.432a1.3 1.3 0 0 0-.407-.22q-.225-.075-.513-.074-.201 0-.36.052a.8.8 0 0 0-.273.147.63.63 0 0 0-.232.508v.007a.6.6 0 0 0 .066.285q.066.115.179.192.113.078.267.127.152.048.331.09.115.025.187.048a.6.6 0 0 1 .115.05.2.2 0 0 1 .059.051q.016.027.016.062v.006a.12.12 0 0 1-.066.112.4.4 0 0 1-.19.04q-.389 0-.724-.266l-.345.407q.209.183.477.275.27.091.57.091a1.3 1.3 0 0 0 .37-.049.8.8 0 0 0 .285-.142.7.7 0 0 0 .183-.225"
+              clip-rule="evenodd"
+            ></path>
+          </svg>
+          <svg
+            class="down-arrow-svg"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M19.53 8.97a.75.75 0 0 1 0 1.06L12 17.56l-7.53-7.53a.75.75 0 1 1 1.06-1.06L12 15.44l6.47-6.47a.75.75 0 0 1 1.06 0"
+              clip-rule="evenodd"
+            ></path>
+          </svg>
+        </button>
+        <nav class="nav-bar">
+          <img
+            class="store-img"
+            src="	https://cms-assets.unrealengine.com/AVzjeqAbLRKi3W5jq0CAvz/cmb81xhnx3wl407o5wzb06x28"
+            alt="store-link-image"
+          />
+          <div class="tab-container">
+            <span class="support-text">Support</span>
+            <span class="support-text"
+              >Distribute
+              <svg
+              class="down-svg"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M19.53 8.97a.75.75 0 0 1 0 1.06L12 17.56l-7.53-7.53a.75.75 0 1 1 1.06-1.06L12 15.44l6.47-6.47a.75.75 0 0 1 1.06 0"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+            </span>
+          </div>
+          <div class="right-container">
+            <div class="toolbar">
+              <button class="lang-svg">
+                <svg
+                class="glob-svg"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"    
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M3.784 11.25H8.01c.065-2.256.423-4.31.985-5.869.166-.457.352-.882.561-1.263a8.26 8.26 0 0 0-5.773 7.132m8.216-9c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25m0 1.5c-.146 0-.383.08-.695.444-.309.362-.62.93-.898 1.697-.494 1.368-.83 3.243-.896 5.359h4.978c-.066-2.116-.402-3.991-.896-5.36-.277-.766-.59-1.334-.898-1.696-.312-.364-.55-.444-.695-.444m3.99 7.5c-.066-2.256-.424-4.31-.986-5.869a9 9 0 0 0-.561-1.263 8.26 8.26 0 0 1 5.773 7.132zm-1.501 1.5H9.51c.065 2.116.402 3.991.896 5.36.277.766.59 1.334.898 1.696.312.364.55.444.695.444.146 0 .383-.08.695-.444.309-.362.62-.93.898-1.697.494-1.368.83-3.243.896-5.359m-.046 7.132a9 9 0 0 0 .56-1.263c.563-1.559.92-3.613.986-5.869h4.227a8.26 8.26 0 0 1-5.773 7.132m-4.886 0a9 9 0 0 1-.56-1.263c-.563-1.559-.92-3.613-.986-5.869H3.784a8.26 8.26 0 0 0 5.773 7.132"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+              </button>
+              <button class="sign-btn right-btn-common">Sign in</button>
             </div>
-        </main>
+            <button class="right-btn-common install-btn">
+              <span class="mobile-view">Install</span>
+              <span class="tab-view">Download</span>
+            </button>
+            <button class="mob-menu mobile-view">
+              <svg
+                class="menu-svg"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M2.25 5A.75.75 0 0 1 3 4.25h18a.75.75 0 0 1 0 1.5H3A.75.75 0 0 1 2.25 5m0 7a.75.75 0 0 1 .75-.75h18a.75.75 0 0 1 0 1.5H3a.75.75 0 0 1-.75-.75m0 7a.75.75 0 0 1 .75-.75h18a.75.75 0 0 1 0 1.5H3a.75.75 0 0 1-.75-.75"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+            </button>
+          </div>
+        </nav>
+      </header>
+      <main>
+        <!-- search section -->
+        <div class="search-section-container">
+          <div class="search-input-lap">
+            <button class="search-btn">
+              <svg
+                class="search-icon"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 21 20"
+                preserveAspectRatio="xMidYMid meet"
+              >
+                <g
+                  transform="scale(1 -1) rotate(-45 -11.93502884 -2)"
+                  stroke="currentColor"
+                  stroke-width="1.65"
+                  fill="none"
+                  fill-rule="evenodd"
+                >
+                  <circle cx="7.70710678" cy="7.70710678" r="7"></circle>
+                  <path
+                    d="M15.2071068 8.62132034h5.6923881"
+                    stroke-linecap="square"
+                  ></path>
+                </g>
+              </svg>
+            </button>
+            <input
+              type="text"
+              placeholder="Search store"
+              class="search-input "
+            />
+          </div>
+          <div class="discover">
+            <span class="discover-text">Discover</span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="down-arrow min-desktop"
+              viewBox="0 0 5 9"
+            >
+              <path
+                stroke="currentColor"
+                d="M1 1l3 3.5L1 8"
+                fill="none"
+                fill-rule="evenodd"
+              ></path>
+            </svg>
+            <span class="browse ">Browse</span>
+            <span class="browse ">News</span>
+          </div>
+        </div>
+        <!-- All-games area -->
+        <!-- carousel -->
+        <div class="carousel-container">
+          <div class="carousel-imgaes">
+            <div class="carousel">
+              <img
+                class="img"
+                src="https://cdn2.unrealengine.com/en-mega-sale-3up-ms-banner-asset-1920x1080-32a2d144ab4d.jpg?resize=1&w=854&h=480&quality=medium"
+                alt="mega sale image"
+              />
+            </div>
+            <div class="carousel ">
+              <img
+                class="img"
+                src="https://cdn2.unrealengine.com/en-rewards-boosted-breaker-asset-7dfda25a88fe.avif?resize=1&w=854&h=480&quality=medium"
+                alt="mega sale image"
+              />
+            </div>
+            <div class="carousel">
+              <img
+                class="img"
+                src="https://cdn2.unrealengine.com/en-mega-sale-3up-fg-banner-asset-1920x1080-615c6807a1ad.jpg?resize=1&w=854&h=480&quality=medium"
+                alt="mega sale image"
+              />
+            </div>
+          </div>
+          <div class="carousel-scroll mobile-view">
+            <span class="scroll-btn"></span>
+            <span class="scroll-btn"></span>
+            <span class="scroll-btn"></span>
+          </div>
+        </div>
+        <!-- carousel-2 -->
+        <div class="hero-carousel-container">
+            <div class="card-container">
+                <picture>
+                    <source media="(min-width:576px)" srcset="https://cdn2.unrealengine.com/egs-gtav-charm-carousel-mobile-1200x1600-0aef067104af.jpg?resize=1&w=640&h=854&quality=medium">
+                    <source media="(min-width:0px)" srcset="https://cdn2.unrealengine.com/egs-gtav-charm-carousel-mobile-1200x1600-0aef067104af.jpg?resize=1&w=640&h=854&quality=medium">
+                    <img class="hero-img" src="https://cdn2.unrealengine.com/egs-gtav-charm-carousel-mobile-1200x1600-0aef067104af.jpg?resize=1&w=640&h=854&quality=medium" alt="GTA 5 image">
+                </picture>
+                <button class="wishlist-btn">
+                </button>
+            </div>
+        </div>
+      </main>
     </div>
-</body>
+  </body>
 </html>
-
-
-
-
