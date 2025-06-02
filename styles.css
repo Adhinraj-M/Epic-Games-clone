@@ -258,12 +258,22 @@ main {
 }
 
 .hero-carousel-container{
-    margin-bottom: 64px;
-    position: relative;
-    margin-top: 20px;
+  margin-bottom: 64px;
+  position: relative;
+  margin-top: 20px;
+  display: flex;
+  height: 100%;
+  width: 100%;
+  flex-direction: column;
+}
+
+.hero-carousel-container .hero-images{
     display: flex;
     height: 100%;
     width: 100%;
+    position: relative;
+    flex: 1;
+    z-index: 1;
     overflow-x: scroll;
     scrollbar-width: none;
 
@@ -272,23 +282,46 @@ main {
 .hero-carousel-container .card-container{
     width: 310px;
     margin-right: 15px;
-    height: auto;
+    height: 100%;
     position: relative;
+    border-radius: 16px;
+    flex-shrink: 0;
     
+}
+
+.ml{
+  margin-left: 16px;
+}
+
+.hero-carousel-container .card-container picture{
+  display: block;
+  width: 100%;
+  height: 100%;
 }
 
 .hero-carousel-container .hero-img{
     width: 100%;
     opacity: 1;
     border-radius: 16px;
+    height: 100%;
+}
+
+.hero-carousel-container .bg-shade{
+  position: absolute;
+  width: 100%;
+  height: 80%;
+  bottom: 5px;
+  left: 0;
+  background: linear-gradient(to top, rgba(11, 11, 11, 0.85), rgba(11, 11, 11, 0));
+  border-radius: 14px;
 }
 
 .wishlist-btn{
     position: absolute;
     background: rgb(16, 16, 20);
     color: rgb(255, 255, 255);
-    width: 22px;
-    height: 22px;
+    width: 24px;
+    height: 24px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -297,8 +330,8 @@ main {
     z-index: 1;
     /* top: 10px;
     right: 10px; */
-    top: 16px;
-    right: 16px;
+    top: 20px;
+    right: 20px;
 
 }
 
@@ -327,6 +360,166 @@ main {
     top: 0;
     margin:auto;
 }
+
+.hero-carousel-container .card-content{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 25px 20px;
+  display: flex;
+  flex-direction: column;
+  color: rgb(255, 255, 255);
+
+}
+
+.hero-carousel-container .card-content .gta-title{
+  width: 150px;
+  height: 65px;
+  margin-bottom: 20px;
+  background-image: url('	https://cdn2.unrealengine.com/egs-gta-5-carousel-logo-339x293-6326ab179b3c.png');
+  background-position: bottom left;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.hero-carousel-container .blade-title{
+  width: 150px;
+  height: 65px;
+  margin-bottom: 20px;
+  background-image: url('	https://cdn2.unrealengine.com/egs-blades-of-fire-carousel-logo-350x312-0fd6d9da3eb7.png');
+  background-position: bottom left;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.hero-carousel-container .card-content .fc-title{
+  width: 150px;
+  height: 65px;
+  margin-bottom: 20px;
+  background-image: url('	https://cdn2.unrealengine.com/egs-ea-fc-25-standard-edition-carousel-logo-350x112-0b199810d945.png');
+  background-position: bottom left;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.hero-carousel-container .card-content .crystal-title{
+  width: 150px;
+  height: 65px;
+  margin-bottom: 20px;
+  background-image: url('	https://cdn2.unrealengine.com/en-egs-crystal-of-atlan-carousel-logo-350x248-c471cf64728a.png');
+  background-position: bottom left;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.hero-carousel-container .card-content .crystal-title{
+  width: 150px;
+  height: 65px;
+  margin-bottom: 20px;
+  background-image: url('	https://cdn2.unrealengine.com/en-egs-crystal-of-atlan-carousel-logo-350x248-c471cf64728a.png');
+  background-position: bottom left;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.hero-carousel-container .card-content .binary-title{
+  width: 150px;
+  height: 65px;
+  margin-bottom: 20px;
+  background-image: url('https://cdn2.unrealengine.com/egs-binary-smoke-carousel-logo-350x229-01001da9c7e7.png');
+  background-position: bottom left;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+
+.hero-carousel-container .card-content .offer-text{
+  font-size: 9px;
+  letter-spacing: 0.09px;
+  line-height: normal;
+  font-weight: bold;
+  display: flex;
+  margin-bottom: 10px;
+  font-family: "epic-font";
+
+}
+
+.hero-carousel-container .card-content .game-description{
+  margin-bottom: 25px;
+  font-size: 14px;
+  letter-spacing: 0.2px;
+  line-height: 1.4;
+  font-weight: 500;
+  font-family: "epic-font";
+
+}
+
+.hero-carousel-container .card-content .price-details{
+  display: flex;
+  align-items: center;
+  flex-flow: row wrap;
+}
+
+.hero-carousel-container .card-content .offer-btn{
+  border: none;
+  border-radius: 20px;
+  padding: 0 8px;
+  background-color: rgb(38, 187, 255);
+  color: #000000;
+  min-height: 1.25rem;
+  /* padding-inline: 0.75rem; */
+  align-items: center;
+  display: inline-flex;
+  font-weight: 500;
+  gap: 0.25rem;
+  max-width: fit-content;
+  font-size: 0.75rem;
+  line-height: 150%;
+  font-family: 'epic-font';
+}
+
+.hero-carousel-container .card-content .price-container{
+  
+  margin-left: 10px;
+  display: flex;
+  color: rgba(255, 255, 255, 0.65);
+  font-weight: 400;
+  font-size: 0.875rem;
+  letter-spacing: 0.02em;
+
+}
+
+.hero-carousel-container .card-content .actual-price{
+  line-height: 165%;
+  text-decoration: line-through;
+  font-family: 'epic-font';
+}
+
+.hero-carousel-container .card-content .offer-price{
+  margin-left: 10px;
+  color: #ffffff;
+  line-height: 140%;
+  font-family: 'epic-font';
+  font-weight: 400;
+  font-size: 0.875rem;
+  letter-spacing: 0.02em;
+
+}
+
+.hero-carousel-container .card-content .direct-price{
+  color: #ffffff;
+  line-height: 140%;
+  font-family: 'epic-font';
+  font-weight: 400;
+  font-size: 0.875rem;
+  letter-spacing: 0.02em;
+}
+
+.hero-images-tablet{
+  display: none;
+}
+
+
 
 /* tablet screen  */
 @media screen and (min-width: 768px) {
@@ -440,10 +633,10 @@ main {
     margin-right: 0;
   }
 
-.carousel-imgaes .carousel:first-child{
+  .carousel-imgaes .carousel:first-child{
     margin-left: 0;
     margin-right: 0;
-}
+  }
 
 
   .carousel-imgaes .carousel .img {
@@ -451,6 +644,197 @@ main {
     height: 100%;
   }
 
+  
+
+   .hero-carousel-container .hero-images{
+    display: none;
+  }
+
+  .carousel-scroll{
+    display: none;
+  }
+
+ 
+
+  .hero-images-tablet{
+    display: flex;
+     padding-inline: 1rem;
+    margin-top: 0px;
+  }
+
+  .hero-images-tablet .main-image{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    flex-basis: calc(100% - (160px + 16px));
+    display: flex;
+  }
+
+  .hero-images-tablet .hero-img-tab{
+    /* position: absolute; */
+    height: 100%;
+    width: 100%;
+    /* opacity: 0; */
+     border-radius: 16px;
+    
+  }
+
+  .hero-carousel-container .bg-shade{
+  position: absolute;
+  width: 80%;
+  left: 0;
+  height:100%;
+  opacity: 0.6;
+  z-index: 0;
+  background: linear-gradient(270deg, rgba(11, 11, 11, 0) 0%, #0B0B0B 100%, #0B0B0B 100%);
+  bottom: 0;
+  
+}
+
+.hero-images-tablet .hero-content-tab{
+  left: 32px;
+  width: 360px;
+  z-index: 1;
+  position: absolute;
+  bottom: 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  top: 0;
+  font-family: 'epic-font';
+  color: #ffffff;
+
+}
+
+.hero-carousel-container .blade-title{
+  height: 55px;
+  background-image: url('	https://cdn2.unrealengine.com/egs-blades-of-fire-carousel-logo-350x312-0fd6d9da3eb7.png');
+  background-position: left bottom;
+  background-repeat: no-repeat;
+  background-size: contain;
+   
+}
+
+.hero-images-tablet .offer-text{
+  font-weight: 700;
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  line-height: 100%;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.hero-images-tablet .game-description{
+  font-weight: 400;
+  font-size: 1rem;
+  letter-spacing: 0em;
+  line-height: 165%;
+  word-break: break-word;
+  /* margin-bottom: 30px; */
+}
+
+.hero-images-tablet .direct-price{
+  color: rgb(245, 245, 245);
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  font-size: 0.875rem;
+  margin-bottom: 10px;
+  margin-top: 30px;
+  line-height: 140%;
+  width: 375px;
+}
+
+.hero-images-tablet .hero-btn{
+  display: flex;
+  gap: 16px;
+  font-family: 'epic-font';
+  width: 375px;
+}
+
+.hero-images-tablet .buy-btn{
+  padding-inline: 1.25rem;
+  border-radius: 10px;
+  height: 3rem;
+  padding-block: 0.75rem;
+  background-color: #ffffff;
+  border: none;
+  color: #000000;  
+  align-items: center;
+  display: inline-flex;
+  font-weight: 500;
+  justify-content: center;
+  position: relative;
+  text-align: center;
+  font-size: 0.875rem;
+  line-height: 140%;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+  flex-wrap: nowrap;
+}
+
+.hero-images-tablet .wish-btn{
+  gap: 0.75rem;
+  padding-inline-end: 1.25rem;
+  padding-inline-start: 1rem;
+  border-radius: 10px;
+  height: 3rem;
+  padding-block: 0.75rem;
+  /* background: transparent; */
+  background-color: rgb(68, 64, 60);
+  border: none;
+  color: #ffffff;
+  width: 100%;
+  display:inline-flex;
+  font-weight: 500;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero-images-tablet .right-hero-section{
+  margin-left: 16px;
+  flex-basis: 160px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  flex-shrink: 1;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  list-style: none;
+  justify-content: space-between;
+  padding: 0;
+  margin-block: 0;
+  margin-right: 0;
+  width: 100px;
+}
+
+.right-hero-section .small-card{
+  display: flex;
+  height: 16.666666666666668%;
+  border-radius: 8px;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  justify-content: flex-start;
+  position: relative;
+}
+
+.right-hero-section .small-card-img{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin: 0 10px;
+}
+
+.right-hero-section .small-card-text{
+  font-family: 'epic-font';
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  font-size: 0.875rem;
+  line-height: 140%;
+  padding-right: 10px;
+}
 
 }
 
