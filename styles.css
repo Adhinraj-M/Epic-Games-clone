@@ -241,7 +241,14 @@ main {
   column-gap: 14px;
 }
 
-.scroll-btn {
+.carousel-scroll-dot{
+  display: flex;
+  margin-block:  20px;
+  justify-content: center;
+  column-gap: 14px;
+}
+
+.scroll-btn-active {
   position: relative;
   border: none;
   height: 5px;
@@ -249,6 +256,16 @@ main {
   border-radius: 50%;
   background-color: rgb(255, 255, 255);
   opacity: 1;
+}
+
+.scroll-btn-non-active {
+  position: relative;
+  border: none;
+  height: 5px;
+  width: 5px;
+  border-radius: 50%;
+  background-color: rgb(255, 255, 255);
+  opacity: 0.3;
 }
 
 .tab-container,
@@ -272,10 +289,11 @@ main {
     height: 100%;
     width: 100%;
     position: relative;
-    flex: 1;
+    /* flex: 1; */
     z-index: 1;
     overflow-x: scroll;
     scrollbar-width: none;
+     box-sizing: content-box;
 
 }
 
@@ -285,8 +303,7 @@ main {
     height: 100%;
     position: relative;
     border-radius: 16px;
-    flex-shrink: 0;
-    
+    flex-shrink: 0;  
 }
 
 .ml{
@@ -295,25 +312,32 @@ main {
 
 .hero-carousel-container .card-container picture{
   display: block;
+  /* background-color: #fff; */
   width: 100%;
-  height: 100%;
+  height: auto;
+ 
 }
 
 .hero-carousel-container .hero-img{
     width: 100%;
+    display: block;
     opacity: 1;
     border-radius: 16px;
     height: 100%;
+    
 }
+
 
 .hero-carousel-container .bg-shade{
   position: absolute;
-  width: 100%;
+  display: block;
+   width: 100%; 
   height: 80%;
-  bottom: 5px;
+  bottom: 0px;
   left: 0;
   background: linear-gradient(to top, rgba(11, 11, 11, 0.85), rgba(11, 11, 11, 0));
   border-radius: 14px;
+ 
 }
 
 .wishlist-btn{
@@ -369,7 +393,6 @@ main {
   display: flex;
   flex-direction: column;
   color: rgb(255, 255, 255);
-
 }
 
 .hero-carousel-container .card-content .gta-title{
@@ -467,7 +490,6 @@ main {
   background-color: rgb(38, 187, 255);
   color: #000000;
   min-height: 1.25rem;
-  /* padding-inline: 0.75rem; */
   align-items: center;
   display: inline-flex;
   font-weight: 500;
@@ -476,6 +498,7 @@ main {
   font-size: 0.75rem;
   line-height: 150%;
   font-family: 'epic-font';
+  letter-spacing: 0.02em;
 }
 
 .hero-carousel-container .card-content .price-container{
@@ -515,7 +538,7 @@ main {
   letter-spacing: 0.02em;
 }
 
-.hero-images-tablet{
+.hero-carousel-container .main-image, .right-hero-section{
   display: none;
 }
 
@@ -654,15 +677,19 @@ main {
     display: none;
   }
 
- 
-
-  .hero-images-tablet{
-    display: flex;
-     padding-inline: 1rem;
-    margin-top: 0px;
+  .carousel-scroll-dot{
+    display: none;
   }
 
-  .hero-images-tablet .main-image{
+  .hero-carousel-container{
+    display: flex;
+    padding-inline: 1rem;
+    margin-top: 20px;
+    width: auto;
+    flex-direction: row;
+  }
+
+  .hero-carousel-container .main-image{
     position: relative;
     width: 100%;
     height: 100%;
@@ -670,7 +697,7 @@ main {
     display: flex;
   }
 
-  .hero-images-tablet .hero-img-tab{
+  .hero-carousel-container .hero-img-tab{
     /* position: absolute; */
     height: 100%;
     width: 100%;
@@ -683,6 +710,7 @@ main {
   position: absolute;
   width: 80%;
   left: 0;
+  top: 0;
   height:100%;
   opacity: 0.6;
   z-index: 0;
@@ -691,7 +719,7 @@ main {
   
 }
 
-.hero-images-tablet .hero-content-tab{
+.hero-carousel-container .hero-content-tab{
   left: 32px;
   width: 360px;
   z-index: 1;
@@ -708,14 +736,12 @@ main {
 
 .hero-carousel-container .blade-title{
   height: 55px;
-  background-image: url('	https://cdn2.unrealengine.com/egs-blades-of-fire-carousel-logo-350x312-0fd6d9da3eb7.png');
+  background-image: url('https://cdn2.unrealengine.com/egs-blades-of-fire-carousel-logo-350x312-0fd6d9da3eb7.png');
   background-position: left bottom;
-  background-repeat: no-repeat;
-  background-size: contain;
    
 }
 
-.hero-images-tablet .offer-text{
+.hero-carousel-container .offer-text{
   font-weight: 700;
   font-size: 0.75rem;
   letter-spacing: 0.1em;
@@ -724,81 +750,84 @@ main {
   margin-bottom: 10px;
 }
 
-.hero-images-tablet .game-description{
+.hero-carousel-container .game-description{
   font-weight: 400;
   font-size: 1rem;
   letter-spacing: 0em;
   line-height: 165%;
   word-break: break-word;
-  /* margin-bottom: 30px; */
+  margin-bottom: 30px;
 }
 
-.hero-images-tablet .direct-price{
+.hero-carousel-container .direct-price{
   color: rgb(245, 245, 245);
   font-weight: 400;
   letter-spacing: 0.02em;
   font-size: 0.875rem;
   margin-bottom: 10px;
-  margin-top: 30px;
+  font-family: 'epic-font';
   line-height: 140%;
   width: 375px;
 }
 
-.hero-images-tablet .hero-btn{
+.hero-carousel-container .hero-btn{
   display: flex;
   gap: 16px;
-  font-family: 'epic-font';
   width: 375px;
+  
 }
 
-.hero-images-tablet .buy-btn{
-  padding-inline: 1.25rem;
+.hero-carousel-container .buy-btn{
+  padding:12px 20px;
   border-radius: 10px;
   height: 3rem;
-  padding-block: 0.75rem;
-  background-color: #ffffff;
+  background: #ffff;
   border: none;
-  color: #000000;  
-  align-items: center;
-  display: inline-flex;
-  font-weight: 500;
-  justify-content: center;
-  position: relative;
-  text-align: center;
-  font-size: 0.875rem;
-  line-height: 140%;
-  letter-spacing: 0.02em;
-  white-space: nowrap;
-  flex-wrap: nowrap;
-}
-
-.hero-images-tablet .wish-btn{
-  gap: 0.75rem;
-  padding-inline-end: 1.25rem;
-  padding-inline-start: 1rem;
-  border-radius: 10px;
-  height: 3rem;
-  padding-block: 0.75rem;
-  /* background: transparent; */
-  background-color: rgb(68, 64, 60);
-  border: none;
-  color: #ffffff;
+  color: #000000;
   width: 100%;
-  display:inline-flex;
   font-weight: 500;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
+  outline: none;
+  position: relative;
+  font-size: 0.875rem;
+  font-family: 'epic-font';
   text-align: center;
+  letter-spacing: 0.02em;
+  line-height: 140%;
 }
 
-.hero-images-tablet .right-hero-section{
+.hero-carousel-container .wish-btn{
+ padding: 12px 20px 12px 16px;
+ gap: 0.75rem;
+ border-radius: 10px;
+ height: 3rem;
+ background: transparent;
+ font-family: 'epic-font';
+ border: none;
+ color: #ffff;
+ width: 100%;
+ font-weight: 500;
+ display: inline-flex;
+ justify-content: center;
+ align-items: center;
+ text-align: center;
+ position: relative;
+ font-size: 0.875rem;
+ letter-spacing: 0.02em;
+ line-height: 140%;
+
+}
+
+.hero-carousel-container .right-hero-section{
   margin-left: 16px;
   flex-basis: 160px;
   display: flex;
   flex-direction: column;
-  flex-grow: 1;
+  flex-grow: 0;
   flex-shrink: 1;
-  height: 100%;
+  height: auto;
   width: 100%;
   position: relative;
   list-style: none;
@@ -806,7 +835,6 @@ main {
   padding: 0;
   margin-block: 0;
   margin-right: 0;
-  width: 100px;
 }
 
 .right-hero-section .small-card{
@@ -815,16 +843,25 @@ main {
   border-radius: 8px;
   overflow: hidden;
   width: 100%;
-  height: 100%;
+  /* height: 100%; */
   justify-content: flex-start;
   position: relative;
+  align-items: center;
 }
 
 .right-hero-section .small-card-img{
   position: relative;
-  width: 100%;
-  height: 100%;
+  width:100%;
+  height: auto;
   margin: 0 10px;
+  flex-shrink: 0;
+  flex-basis: 28px;
+  border-radius: 4px;
+  overflow: hidden;
+  z-index: 1;
+  display: flex;
+  /* padding-bottom: calc(4/3 * 100%); */
+
 }
 
 .right-hero-section .small-card-text{
@@ -834,7 +871,27 @@ main {
   font-size: 0.875rem;
   line-height: 140%;
   padding-right: 10px;
+  z-index: 1;
+  margin: 0;
+  display: flex;
+  align-self: center;
 }
+
+.right-hero-section .small-card-shade{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 1;
+  z-index: 0;
+  background-color: #28282c;
+}
+
+.mt-3{
+  margin-top: 3px;
+}
+
 
 }
 
@@ -880,7 +937,46 @@ main {
     width: 75%;
     margin-inline: auto;
   }
+
+  .hero-carousel-container{
+    width: 75%;
+    margin-inline: auto;
+    padding-inline: 0;
+  }
+
+  .right-hero-section .small-card-img {
+    flex-basis: 25px;
+  }
+
+  .hero-carousel-container .blade-title{
+    height: 80px;
+    margin-bottom: 17px;
+  }
+
 }
+
+
+@media screen and (min-width:1280px) {
+  .hero-carousel-container .main-image{
+    flex-basis: calc(100% - (176px + 16px));
+  }
+   .hero-carousel-container .blade-title{
+    width: 200px;
+    height: 145px;
+    margin-bottom: 25px;
+  }
+
+   .hero-carousel-container .right-hero-section {
+    margin-left: 16px;
+    flex-basis: 176px;
+  }
+
+   .right-hero-section .small-card-img{
+    flex-basis: 40px;
+    border-radius: 4px;
+  }
+}
+
 
 /* desktop screen */
 
@@ -905,4 +1001,58 @@ main {
   .browse {
     display: block;
   }
+
+  .hero-carousel-container .main-image{
+    flex-basis:calc(100% - (180px + 20px)) ;
+  }
+
+  .hero-carousel-container .hero-content-tab {
+    left: 40px;
+    bottom: 40px;
+    height: auto;
+    align-self: end;
+  }
+
+  .hero-carousel-container .blade-title{
+    width: 220px;
+    height: 160px;
+    margin-bottom: 40px;
+  }
+
+  .hero-carousel-container .right-hero-section {
+    margin-left: 20px;
+    flex-basis: 180px;
+  }
+
+  .right-hero-section .small-card {
+    border-radius: 8px;
+  }
+
+  .right-hero-section .small-card-img{
+    flex-basis: 40px;
+    border-radius: 4px;
+    margin-inline: 15px;
+  }
+
 }
+
+@media screen and (min-width:1600px){
+  .hero-carousel-container .hero-content-tab{
+    bottom: 56px;
+    left: 56px;
+  }
+
+  .hero-carousel-container .blade-title {
+    width: 260px;
+  }
+
+  .hero-carousel-container .right-hero-section{
+    margin-left: 32px;
+  }
+
+      .right-hero-section .small-card-img {
+        flex-basis: 43.5px;
+      }
+
+}
+
