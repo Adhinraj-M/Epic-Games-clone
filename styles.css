@@ -9,6 +9,18 @@
     format("woff2");
 }
 
+@font-face {
+  font-family: "epic-regular";
+  src: url("/font/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa0ZL7W0Q5n-wU.woff2")
+    format("woff2");
+}
+
+@font-face {
+  font-family: "epic-add";
+  src: url("/font/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa25L7W0Q5n-wU.woff2")
+    format("woff2");
+}
+
 svg {
   fill: currentColor;
 }
@@ -209,7 +221,7 @@ main {
   padding-left: 15px;
 }
 
-.carousel-imgaes {
+.carousel-images {
   display: flex;
   height: 100%;
   width: 100%;
@@ -222,13 +234,13 @@ main {
   position: relative;
 }
 
-.carousel-imgaes .carousel {
+.carousel-images .carousel {
   height: auto;
   width: 100%;
   margin-right: 15px;
 }
 
-.carousel-imgaes .carousel .img {
+.carousel-images .carousel .img {
   width: 297.5px;
   height: auto;
   border-radius: 8px;
@@ -323,7 +335,7 @@ main {
     display: block;
     opacity: 1;
     border-radius: 16px;
-    height: 100%;
+    height: 413.33px;
     
 }
 
@@ -352,10 +364,10 @@ main {
     border-radius: 50%;
     border: 2px solid rgb(255, 255, 255);
     z-index: 1;
-    /* top: 10px;
-    right: 10px; */
-    top: 20px;
-    right: 20px;
+    top: 10px;
+    right: 10px;
+    /* top: 20px;
+    right: 20px; */
 
 }
 
@@ -499,17 +511,19 @@ main {
   line-height: 150%;
   font-family: 'epic-font';
   letter-spacing: 0.02em;
+  position: relative;
+  top: 1px;
 }
 
 .hero-carousel-container .card-content .price-container{
   
   margin-left: 10px;
-  display: flex;
+  display: inline-flex;
   color: rgba(255, 255, 255, 0.65);
   font-weight: 400;
   font-size: 0.875rem;
   letter-spacing: 0.02em;
-
+  align-items: center;
 }
 
 .hero-carousel-container .card-content .actual-price{
@@ -542,7 +556,114 @@ main {
   display: none;
 }
 
+.card-carousel-container {
+    margin-bottom: 64px;
+    position: relative;
+    padding-left: 16px;
+}
 
+.card-carousel-container .heading-container{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 16px 18px 0px;
+
+}
+
+.card-carousel-container .heading-container .discover-heading{
+  display: flex;
+  font-family: 'epic-bold';
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  line-height: 125%;
+  font-size: 1.25rem;
+  margin-block: 0;
+
+}
+
+.arrow-right{
+  margin-left: 5px;
+  
+}
+
+.card-carousel-container .carousel-card{
+  width: 216.875px;
+  margin-right: 20px;
+  transform: translateZ(0);
+  height: auto;
+  display: flex;
+  flex-shrink: 0;
+  position: relative;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.card-carousel-container .carousel-card::before{
+  z-index: 0;
+  content: '';
+  position:absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 4px;
+}
+
+
+.card-carousel-container .carousel-card .card-img-container{
+    width: 100%;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  height:auto;
+  position: absolute;
+  transform: translate(-50%,-50%);
+  top: 50%;
+  left: 50%;
+
+}
+
+.card-carousel-container .carousel-card .card-img{
+
+}
+
+.card-carousel-container .carousel-card .game-info{
+  display: flex;
+  flex-direction: column;
+  font-family: 'epic-font';
+  flex-grow: 1;
+  flex-shrink: 0;
+  font-weight: 400;
+
+}
+
+.card-carousel-container .carousel-card .game-info .base-game-text{
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 0.75rem;
+  line-height: 150%;
+  
+  letter-spacing: 0.02em;
+}
+
+.card-carousel-container .carousel-card .game-info .game-name{
+  margin-block: 5px;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  line-height: 125%;
+  font-family: 'epic-bold';
+}
+
+.card-carousel-container .carousel-card .game-info .game-price{
+  margin-top: 10px;
+  letter-spacing: 0.02em;
+  font-size: 0.875rem;
+  line-height: 140%;
+
+}
+
+.right-left-btn{
+  display: none;
+}
 
 /* tablet screen  */
 @media screen and (min-width: 768px) {
@@ -642,12 +763,12 @@ main {
     padding-inline: 31px;
   }
 
-  .carousel-imgaes{
+  .carousel-images{
     display: flex;
     justify-content: space-evenly;
   }
 
-  .carousel-imgaes .carousel {
+  .carousel-images .carousel {
     width: calc(100% / 3 - 16px);
     display: flex;
     flex-direction: column;
@@ -656,18 +777,16 @@ main {
     margin-right: 0;
   }
 
-  .carousel-imgaes .carousel:first-child{
+  .carousel-images .carousel:first-child{
     margin-left: 0;
     margin-right: 0;
   }
 
 
-  .carousel-imgaes .carousel .img {
+  .carousel-images .carousel .img {
     width: 100%;
     height: 100%;
   }
-
-  
 
    .hero-carousel-container .hero-images{
     display: none;
@@ -684,7 +803,6 @@ main {
   .hero-carousel-container{
     display: flex;
     padding-inline: 1rem;
-    margin-top: 20px;
     width: auto;
     flex-direction: row;
   }
@@ -892,6 +1010,57 @@ main {
   margin-top: 3px;
 }
 
+.right-left-btn{
+  display: flex;
+  column-gap: 10px;
+}
+
+
+.right-left-btn .left-btn{
+  width: 30px;
+  height: 30px;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255, 255, 255, 1) ;
+  border-radius: 100%;
+  opacity: 0.;
+}
+
+.scale{
+transform: scaleX(-1);
+}
+
+.right-left-btn .left-btn::before{
+  content: '';
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.arrows{
+  width: 12px;
+  height: 12px;
+}
+
+.arrow-right{
+  align-self: center;
+}
+
+.card-carousel-container .heading-container{
+  margin: 0 32px 18px 0px;
+}
+
+.card-carousel-container .heading-container .discover-heading{
+  align-self: flex-start;
+}
+.card-carousel-container .carousel-card{
+  width: 169px;
+}
+
+.wishlist-btn{
+  display: none;
+}
 
 }
 
@@ -953,10 +1122,40 @@ main {
     margin-bottom: 17px;
   }
 
+  .card-carousel-container{
+    width: 75%;
+    margin-inline: auto;
+    padding-left: 0;
+  }
+
+  .card-carousel-container .heading-container {
+    margin: 0 0 18px;
+  }
+  .card-carousel-container .carousel-card{
+  width: 137.6px;
+  }
+
 }
 
-
+/* 1280+ screen */
 @media screen and (min-width:1280px) {
+
+  .header-container{
+    column-gap: 1.75rem;
+  }
+
+  nav .store-img {
+      margin-right: 1.5rem;
+  }
+
+  nav .tab-container .support-text{
+    padding: 10px 16px;
+  }
+
+   nav .right-container .toolbar {
+    gap: 1rem;
+   }
+
   .hero-carousel-container .main-image{
     flex-basis: calc(100% - (176px + 16px));
   }
@@ -975,6 +1174,18 @@ main {
     flex-basis: 40px;
     border-radius: 4px;
   }
+
+  .min-desktop {
+    display: none;
+  }
+
+  .browse {
+    display: block;
+  }
+
+  .card-carousel-container .carousel-card{
+  width: 176px;
+  }
 }
 
 
@@ -984,23 +1195,19 @@ main {
   nav .right-container .toolbar {
     gap: 1rem;
   }
-  nav .store-img {
+  /* nav .store-img {
     margin-left: 20px;
     margin-right: 1.5rem;
-  }
+  } */
   nav .tab-container .support-text {
     padding: 10px 16px;
   }
-  .min-desktop {
-    display: none;
-  }
+  
   .search-section-container .discover .discover-text {
     margin-right: 9px;
   }
 
-  .browse {
-    display: block;
-  }
+  
 
   .hero-carousel-container .main-image{
     flex-basis:calc(100% - (180px + 20px)) ;
@@ -1034,12 +1241,21 @@ main {
     margin-inline: 15px;
   }
 
+  .card-carousel-container .carousel-card{
+  width: 200px;
+  }
+
 }
 
+/* 1600+ screen */
 @media screen and (min-width:1600px){
   .hero-carousel-container .hero-content-tab{
     bottom: 56px;
     left: 56px;
+  }
+
+  .hero-carousel-container .main-image {
+    flex-basis:calc(100% - (256px + 32px))
   }
 
   .hero-carousel-container .blade-title {
@@ -1048,11 +1264,28 @@ main {
 
   .hero-carousel-container .right-hero-section{
     margin-left: 32px;
+    flex-basis: 256px;
   }
 
-      .right-hero-section .small-card-img {
+  .right-hero-section .small-card-img {
         flex-basis: 43.5px;
-      }
+   }
+
+  .card-carousel-container .carousel-card{
+  width: 183.333px;
+  }
 
 }
 
+/* 1920+ screen */
+@media screen and (min-width:1920px){
+
+  .right-hero-section .small-card-img {
+        flex-basis: 60px;
+   }
+
+  .card-carousel-container .carousel-card{
+  width: 223.333px;
+  }
+
+}
