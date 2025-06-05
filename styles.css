@@ -489,13 +489,13 @@ main {
 
 }
 
-.hero-carousel-container .card-content .price-details{
+ .price-details{
   display: flex;
   align-items: center;
   flex-flow: row wrap;
 }
 
-.hero-carousel-container .card-content .offer-btn{
+.price-details .offer-btn{
   border: none;
   border-radius: 20px;
   padding: 0 8px;
@@ -515,8 +515,7 @@ main {
   top: 1px;
 }
 
-.hero-carousel-container .card-content .price-container{
-  
+.price-details .price-container{
   margin-left: 10px;
   display: inline-flex;
   color: rgba(255, 255, 255, 0.65);
@@ -526,13 +525,13 @@ main {
   align-items: center;
 }
 
-.hero-carousel-container .card-content .actual-price{
+.price-details .price-container .actual-price{
   line-height: 165%;
   text-decoration: line-through;
   font-family: 'epic-font';
 }
 
-.hero-carousel-container .card-content .offer-price{
+.price-details .price-container .offer-price{
   margin-left: 10px;
   color: #ffffff;
   line-height: 140%;
@@ -586,6 +585,17 @@ main {
   
 }
 
+ .carousel-wrapper{
+  display: flex;
+  height: 100%;
+  position: relative;
+  box-sizing: content-box;
+  width: 100%;
+  z-index: 1;
+  overflow-x: scroll;
+  scrollbar-width: none;
+}
+
 .card-carousel-container .carousel-card{
   width: 216.875px;
   margin-right: 20px;
@@ -595,34 +605,25 @@ main {
   flex-shrink: 0;
   position: relative;
   flex-direction: column;
-  margin-bottom: 10px;
+  margin-bottom: 40px;
 }
 
-.card-carousel-container .carousel-card::before{
-  z-index: 0;
-  content: '';
-  position:absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  border-radius: 4px;
-}
-
-
-.card-carousel-container .carousel-card .card-img-container{
-    width: 100%;
+ .card-img-container{
+  position: relative;
   margin-bottom: 10px;
-  border-radius: 8px;
-  height:auto;
-  position: absolute;
-  transform: translate(-50%,-50%);
-  top: 50%;
-  left: 50%;
-
+  
 }
 
 .card-carousel-container .carousel-card .card-img{
+  width: 100%;
+  border-radius: 8px;
+  height:auto;
+  position: relative;
+  transform: translate(-50% , -50%);
+  top: 50%;
+  left: 50%;
+  object-fit: cover;
+  display: block;
 
 }
 
@@ -663,6 +664,191 @@ main {
 
 .right-left-btn{
   display: none;
+}
+
+.carousel-container .carousel-wrapper .content-container{
+  display: flex;
+  flex-direction:column ;
+  position: relative;
+  /* height: 100%; */
+  flex-shrink: 0;
+  width:297.5px;
+
+  margin-right: 15px;
+  /* width: 79.3336vw; */
+  
+}
+
+.landscape-container{
+  position: relative;
+  aspect-ratio: 16 / 9;
+  /* width: 100%; */
+}
+
+.landscape-img{
+  position: relative;
+  bottom: 0px;
+  display: block;
+  height: auto;
+  width:100%;
+  border-radius: 8px;
+}
+
+.landscape-game-data{
+  padding-right: 24px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 0;
+  margin-top: 20px;
+  padding-right: 24px;
+  /* padding given two times */
+}
+
+.landscape-game-data .game-name{
+  width: 100%;
+  margin-bottom: 10px;
+  font-family: 'epic-bold';
+  color: #ffffff;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  line-height: 125%;
+  font-size: 1.25rem;
+  margin-top: 0;
+}
+
+.landscape-game-data .game-description{
+  display: flex;
+  flex: 1;
+  color: hsla(0,0%,100%,0.65);
+  font-family: 'epic-font';
+  font-weight: 400;
+  font-size: 0.875rem;
+  letter-spacing: 0.02em;
+  line-height: 165%;
+}
+
+.landscape-game-data .shop-btn{
+  margin-top: 20px;
+  display: inline-flex;
+  align-self: flex-start;
+  padding-inline: 1rem;
+  border-radius: 8px;
+  height: 2.5rem;
+  padding-block: 0.5rem;
+  background-color: hsla(0,0%,100%,0.15);
+  border: none;
+  font-family: 'epic-font';
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-weight: 500;
+  color: #fff;
+  font-size: 16px;
+}
+
+.landscape-game-data .shop-btn .shop-svg{
+  margin-inline-start: 0.25rem;
+  height: 1.25rem;
+  width: 1.25rem;
+  translate: 0px -1.4px;
+}
+
+.mt-10{
+  margin-top: 10px;
+}
+
+.free-games-container{
+  padding-inline: 1rem;
+  overflow: hidden;
+  background-color: rgb(32, 32, 36);
+  color: rgb(255, 255, 255);
+  border-radius: 12px;
+  position: relative;
+  padding-block: 30px;
+  margin-bottom: 64px;
+}
+
+.free-games-container .heading-container{
+  display: flex;
+  justify-content: space-between;
+  min-height: 30px;
+  margin-bottom: 25px;
+  align-items: center;
+}
+
+.free-games-container .free-games-title{
+  display: flex;
+  align-items: center;
+  font-family: 'epic-bold';
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  line-height: 125%;
+  font-size: 1.25rem;
+}
+
+.free-games-container .free-games-title .gift-svg{
+  width: 27px;
+  height: 27px;
+  margin-right: 18px;
+  line-height: 0;
+  display: block;
+}
+
+.free-games-container .view-btn{
+  padding-inline: 15px;
+  padding-block: 7px;
+  border-radius: 8px;
+  height: 2.5rem;
+  background: transparent;
+  border: 1px solid hsla(0,0%,100%,0.35) ;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'epic-font';
+  letter-spacing: 0.02em;
+  font-size: 0.875rem;
+  line-height: 140%;
+  color: #fff;
+}
+
+.free-games-container .free-games-card{
+  display: flex;
+  flex-wrap: wrap;
+  flex: 0 1 auto;
+  align-content: stretch;
+  align-items: stretch;
+  width: 100%;
+}
+
+.free-games-container .free-games-card .game-card{
+  margin-left: 0;
+  flex-basis: calc(50% - 1rem);
+  flex: 1 1 100%;
+  overflow: hidden;
+  margin-bottom: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+}
+
+.free-games-container .free-games-card .image-container{
+  position: relative;
+  margin-bottom: 10px;
+  width: 100%;
+
+}
+
+.free-games-container .free-games-card .free-game-img{
+    height: auto;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    opacity: 1;
 }
 
 /* tablet screen  */
@@ -1056,15 +1242,30 @@ transform: scaleX(-1);
 }
 .card-carousel-container .carousel-card{
   width: 169px;
+  margin-bottom: 59px;
 }
 
 .wishlist-btn{
   display: none;
 }
 
+.carousel-container .carousel-wrapper .content-container{
+  width: calc(100% / 3 - 16px);
+  margin-right: 20px;
 }
 
-/* laptop screen */
+.tab-view{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+ .carousel-container .carousel-wrapper :nth-child(3){
+  margin-right: 0px;
+}
+
+}
+
+/* laptop screen gdgfdg*/
 
 @media screen and (min-width: 1024px) {
   .search-section-container {
@@ -1126,6 +1327,7 @@ transform: scaleX(-1);
     width: 75%;
     margin-inline: auto;
     padding-left: 0;
+    margin-bottom: 44px;
   }
 
   .card-carousel-container .heading-container {
@@ -1275,10 +1477,48 @@ transform: scaleX(-1);
   width: 183.333px;
   }
 
+  .landscape-game-data {
+    margin-top: 30px;
+  }
+
+  .landscape-game-data .game-name {
+    margin-bottom: 15px;
+  }
+
+}
+
+@media screen and (min-width:1905px){
+
+  .card-carousel-container .carousel-card{
+  width: 221.5px;
+  }
+
+   .hero-carousel-container .hero-content-tab{
+    bottom: 56px;
+    left: 56px;
+  }
+
+  .hero-carousel-container .main-image {
+    flex-basis:calc(100% - (256px + 32px))
+  }
+
+  .hero-carousel-container .blade-title {
+    width: 260px;
+  }
+
+  .hero-carousel-container .right-hero-section{
+    margin-left: 32px;
+    flex-basis: 256px;
+  }
+
+  .right-hero-section .small-card-img {
+        flex-basis: 60px;
+   }
+
 }
 
 /* 1920+ screen */
-@media screen and (min-width:1920px){
+/* @media screen and (min-width:1920px){
 
   .right-hero-section .small-card-img {
         flex-basis: 60px;
@@ -1288,4 +1528,4 @@ transform: scaleX(-1);
   width: 223.333px;
   }
 
-}
+} */
