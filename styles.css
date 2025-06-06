@@ -495,7 +495,7 @@ main {
   flex-flow: row wrap;
 }
 
-.price-details .offer-btn{
+ .offer-btn{
   border: none;
   border-radius: 20px;
   padding: 0 8px;
@@ -525,13 +525,13 @@ main {
   align-items: center;
 }
 
-.price-details .price-container .actual-price{
+ .actual-price{
   line-height: 165%;
   text-decoration: line-through;
   font-family: 'epic-font';
 }
 
-.price-details .price-container .offer-price{
+ .offer-price{
   margin-left: 10px;
   color: #ffffff;
   line-height: 140%;
@@ -542,7 +542,7 @@ main {
 
 }
 
-.hero-carousel-container .card-content .direct-price{
+ .direct-price{
   color: #ffffff;
   line-height: 140%;
   font-family: 'epic-font';
@@ -569,7 +569,7 @@ main {
 
 }
 
-.card-carousel-container .heading-container .discover-heading{
+ .discover-heading{
   display: flex;
   font-family: 'epic-bold';
   font-weight: 700;
@@ -640,8 +640,7 @@ main {
 .card-carousel-container .carousel-card .game-info .base-game-text{
   color: rgba(255, 255, 255, 0.65);
   font-size: 0.75rem;
-  line-height: 150%;
-  
+  line-height: 150%; 
   letter-spacing: 0.02em;
 }
 
@@ -758,97 +757,261 @@ main {
   margin-top: 10px;
 }
 
-.free-games-container{
-  padding-inline: 1rem;
-  overflow: hidden;
-  background-color: rgb(32, 32, 36);
-  color: rgb(255, 255, 255);
-  border-radius: 12px;
-  position: relative;
-  padding-block: 30px;
-  margin-bottom: 64px;
+.mt-20{
+  margin-top: 20px;
 }
 
-.free-games-container .heading-container{
-  display: flex;
-  justify-content: space-between;
+.free-games-container{
+  margin-bottom: 64px;
+  padding-inline: 0;
+  padding-block: 30px;
+  overflow: hidden;
+  position: relative;
+  background-color: rgb(32, 32, 36);
+  color: rgb(255, 255, 255);
+}
+
+.free-games-container .free-games-title-container{
+  padding-inline: 1rem;
   min-height: 30px;
   margin-bottom: 25px;
+  justify-content: space-between;
   align-items: center;
+  display: flex;
 }
 
 .free-games-container .free-games-title{
   display: flex;
   align-items: center;
+  color: #fff;
   font-family: 'epic-bold';
   font-weight: 700;
   letter-spacing: 0.02em;
   line-height: 125%;
   font-size: 1.25rem;
+  margin: 0;
 }
 
 .free-games-container .free-games-title .gift-svg{
   width: 27px;
   height: 27px;
-  margin-right: 18px;
-  line-height: 0;
   display: block;
+  margin-right: 18px;
 }
 
-.free-games-container .view-btn{
-  padding-inline: 15px;
+.free-games-container .view-more-btn{
+  padding-inline:15px ;
   padding-block: 7px;
   border-radius: 8px;
-  height: 2.5rem;
-  background: transparent;
-  border: 1px solid hsla(0,0%,100%,0.35) ;
-  font-weight: 500;
+   border: 1px solid hsla(0,0%,100%,0.35);
+   height: 2.5rem;
+  background-color: transparent;
+  color: #fff;
   display: inline-flex;
+  font-weight: 500;
   align-items: center;
-  justify-content: center;
   font-family: 'epic-font';
   letter-spacing: 0.02em;
   font-size: 0.875rem;
   line-height: 140%;
-  color: #fff;
+  justify-content: center;
 }
 
-.free-games-container .free-games-card{
+.free-games-container .free-card-container{
   display: flex;
-  flex-wrap: wrap;
-  flex: 0 1 auto;
-  align-content: stretch;
-  align-items: stretch;
+  overflow-x: scroll;
+  height: 100%;
   width: 100%;
+  scrollbar-width: none;
+  flex: 0 1 auto;
+  flex-wrap: nowrap;
 }
-
-.free-games-container .free-games-card .game-card{
-  margin-left: 0;
-  flex-basis: calc(50% - 1rem);
-  flex: 1 1 100%;
+.free-games-container .free-card-container::after{
+  min-width: 1rem;;
+}
+.free-games-container .free-card{
+  padding-left: 1rem;
+     min-width: calc(85.7334% - 1rem);
+  flex-shrink: 1;
+  flex-grow: 1;
   overflow: hidden;
-  margin-bottom: 0.5rem;
+  position: relative;
+  margin-bottom:18px;
+  height: 100%;
   display: flex;
   flex-direction: column;
-  height: 100%;
-
 }
 
-.free-games-container .free-games-card .image-container{
+.free-card-container .free-img-container{
+  width: 100%;
+  height: 100%;
   position: relative;
   margin-bottom: 10px;
-  width: 100%;
-
+  overflow: hidden;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+ 
 }
 
-.free-games-container .free-games-card .free-game-img{
-    height: auto;
-    width: 100%;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    position: absolute;
-    opacity: 1;
+.free-card-container .free-img-container .free-img{
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+
+.free-card-container .free-img-container .free-now-btn{
+  font-size: 12px;
+  letter-spacing: 0.5px;
+  line-height: 1.3333;
+  font-weight: 700;
+  text-transform: uppercase;
+  display: block;
+  padding: 5px;
+  text-align: center;
+  background-color: rgb(38, 187, 255);
+  color: rgb(0, 0, 0);
+  font-family: 'epic-font';
+}
+
+.free-card-container .free-game-info{
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  padding-right: 20px;
+  gap: 5px;
+  margin-top: 10px;
+  flex-shrink: 0;
+}
+
+.free-card-container .free-game-info .game-name{
+  color: #fff;
+  font-size: 1rem;
+  font-family: 'epic-bold';
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  line-height: 125%;
+  margin: 0;
+}
+
+.free-card-container .free-game-info .availability-text{
+  color:hsla(0,0%,100%,0.65);
+  font-size: 1rem;
+  font-family: 'epic-font';
+  font-weight: 400;
+  letter-spacing: 0em;
+  line-height: 165%;
+  margin: 0;
+}
+
+.small-card-container{
+  list-style: outside none none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: stretch;
+  width: 996px;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.small-card-container .vertical-container{
+  border-right: 1px solid rgb(64, 64, 64);
+  padding: 0px 16px;
+  width: 300px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.small-card-container .all-small-card{
+  list-style: outside none none;
+  margin: 0px;
+  padding: 0px;
+  width: 100%;
+  flex: 1 1 0%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.vertical-container .small-card{
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  overflow: hidden;
+}
+
+.vertical-container .img-section{
+ position: relative;
+ margin-right: 15px; 
+  max-width: 100%;
+}
+
+.vertical-container .img-section .small-img{
+ height: auto;
+ display: block;
+ opacity: 1;
+ width: 48px;
+ height: 64px;
+}
+
+.all-small-card .small-card-info{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.all-small-card .small-card-info .name{
+  color: #fff;
+  font-size: 1rem;
+  font-family: 'epic-bold';
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  line-height: 125%;
+  margin-inline: 0;
+  margin-top: 0;
+  margin-bottom: 12px;
+}
+
+.block{
+  display: block;
+}
+
+.btn-size-20{
+  height: 20px;
+  width: 20px;
+  top: 4px;
+  left: 24px;
+}
+
+
+
+.current-offer{
+  color: rgba(255, 255, 255, 0.65);
+  font-family: 'epic-font';
+  font-weight: 400;
+  font-size: 0.875rem;
+  letter-spacing: 0.02em;
+  line-height: 165%;
+  margin: 0;
+  margin-left: 10px;
+  text-decoration: line-through;
+}
+
+.current-price{
+  margin-left: 10px;
+  color: rgba(255, 255, 255, 0.65);
+  font-family: 'epic-font';
+  font-weight: 400;
+  font-size: 0.875rem;
+  letter-spacing: 0.02em;
+  line-height: 140%;
+  margin: 0;
 }
 
 /* tablet screen  */
@@ -1063,7 +1226,7 @@ main {
   margin-bottom: 30px;
 }
 
-.hero-carousel-container .direct-price{
+.direct-price{
   color: rgb(245, 245, 245);
   font-weight: 400;
   letter-spacing: 0.02em;
@@ -1237,7 +1400,7 @@ transform: scaleX(-1);
   margin: 0 32px 18px 0px;
 }
 
-.card-carousel-container .heading-container .discover-heading{
+.discover-heading{
   align-self: flex-start;
 }
 .card-carousel-container .carousel-card{
@@ -1263,9 +1426,34 @@ transform: scaleX(-1);
   margin-right: 0px;
 }
 
+.free-games-container{
+  padding-inline: 30px;
+  border-radius: 8px;
+}
+.free-games-container .free-card{
+  flex-basis: calc(33% - 1rem);
+  min-width: 0;
+  margin-bottom: 10px;
 }
 
-/* laptop screen gdgfdg*/
+.free-games-container .free-card:first-child{
+  padding-left: 0;
+  margin-left: 0;
+}
+
+.free-games-container .free-games-title-container{
+  padding-inline: 0;
+}
+
+.free-games-container .free-games-title .gift-svg{
+  width: 35px;
+  height: 35px;
+  margin-right: 14px;
+}
+
+}
+
+/* laptop screen */
 
 @media screen and (min-width: 1024px) {
   .search-section-container {
@@ -1335,6 +1523,23 @@ transform: scaleX(-1);
   }
   .card-carousel-container .carousel-card{
   width: 137.6px;
+  }
+
+  .free-games-container { 
+    margin-inline: auto;
+    width:67.19%;
+    padding-inline: 40px;
+  }
+
+  .free-games-container .free-card {
+    padding-left: 0;
+    margin-left: 20px;
+  }
+
+  .free-card-container .free-img-container .free-now-btn {
+    font-size: 10px;
+    line-height: 14px;
+    letter-spacing: 0.2px;
   }
 
 }
@@ -1517,15 +1722,3 @@ transform: scaleX(-1);
 
 }
 
-/* 1920+ screen */
-/* @media screen and (min-width:1920px){
-
-  .right-hero-section .small-card-img {
-        flex-basis: 60px;
-   }
-
-  .card-carousel-container .carousel-card{
-  width: 223.333px;
-  }
-
-} */
