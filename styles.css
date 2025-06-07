@@ -806,7 +806,7 @@ main {
   margin-right: 18px;
 }
 
-.free-games-container .view-more-btn{
+ .view-more-btn{
   padding-inline:15px ;
   padding-block: 7px;
   border-radius: 8px;
@@ -1602,6 +1602,9 @@ transform: scaleX(-1);
     padding: 0px 16px;
   }
 
+
+
+
 }
 
 /* 1280+ screen */
@@ -1654,14 +1657,10 @@ transform: scaleX(-1);
   width: 176px;
   }
 
-  .small-card-container{
-    margin: 0px -16px
-  }
-
-  .small-card-container .vertical-container{
-    padding: 0px;
-  }
-
+ 
+br{
+  display: none;
+}
   
 
 }
@@ -1720,6 +1719,31 @@ transform: scaleX(-1);
   width: 200px;
   }
 
+  .small-card-container .vertical-container{
+    width: 100%;
+  }
+
+  .vertical-container .img-section .small-img{
+    width: 60px;
+    height: 80px;
+  }
+
+  .small-card-container{
+    width: auto;
+  }
+
+  .block{
+    display: flex;
+  }
+
+  .current-price-container{
+    display: flex;
+  }
+
+  .all-small-card .small-card-info{
+    max-width: 229px;
+  }
+
 }
 
 /* 1600+ screen */
@@ -1756,6 +1780,11 @@ transform: scaleX(-1);
 
   .landscape-game-data .game-name {
     margin-bottom: 15px;
+  }
+
+  .vertical-container .img-section .small-img{
+    width: 96px;
+    height:129px;
   }
 
 }
