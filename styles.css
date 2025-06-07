@@ -139,6 +139,13 @@ main {
   z-index: auto;
 }
 
+.search-section{
+  background-color: rgb(16, 16, 20);
+  position: sticky;
+  top: 0;
+  z-index: 990;
+}
+
 .search-section-container {
   height: 80px;
   background-color: rgb(16, 16, 20);
@@ -920,7 +927,7 @@ main {
 .small-card-container .vertical-container{
   border-right: 1px solid rgb(64, 64, 64);
   padding: 0px 16px;
-  width: 300px;
+  width:fit-content;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -941,7 +948,6 @@ main {
   position: relative;
   display: flex;
   align-items: center;
-  justify-content: center;
   padding: 10px;
   overflow: hidden;
 }
@@ -963,7 +969,7 @@ main {
 .all-small-card .small-card-info{
   display: flex;
   flex-direction: column;
-  width: 100%;
+  max-width: 183px;
 }
 
 .all-small-card .small-card-info .name{
@@ -976,6 +982,12 @@ main {
   margin-inline: 0;
   margin-top: 0;
   margin-bottom: 12px;
+  display: -webkit-box;
+  overflow: hidden;
+  word-break: break-word;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+
 }
 
 .block{
@@ -1012,6 +1024,30 @@ main {
   letter-spacing: 0.02em;
   line-height: 140%;
   margin: 0;
+}
+
+
+.pl{
+  padding-left: 0;
+}
+
+.comming-soon-text{
+  color: hsla(0,0%,100%,0.65);
+  font-size: 0.75rem;
+  line-height: 150%;
+  font-family: 'epic-font';
+  font-weight: 400;
+  letter-spacing: 0.02em;
+}
+
+.game-list-container{
+  width: 100vw;
+  overflow-x: scroll;
+  scrollbar-width: none;
+}
+
+.small-card-container .vertical-container:last-child{
+  border: none;
 }
 
 /* tablet screen  */
@@ -1451,6 +1487,22 @@ transform: scaleX(-1);
   margin-right: 14px;
 }
 
+.all-small-card .small-card-info{
+  max-width: 151px;
+}
+
+.small-card-container .vertical-container{
+  padding: 0px 8px;
+}
+
+.game-list-container {
+  padding: 0 16px;
+  overflow: hidden;
+  width: auto;
+
+}
+
+
 }
 
 /* laptop screen */
@@ -1542,6 +1594,14 @@ transform: scaleX(-1);
     letter-spacing: 0.2px;
   }
 
+  .game-list-container{
+    padding: 0;
+  }
+
+  .small-card-container .vertical-container{
+    padding: 0px 16px;
+  }
+
 }
 
 /* 1280+ screen */
@@ -1593,6 +1653,17 @@ transform: scaleX(-1);
   .card-carousel-container .carousel-card{
   width: 176px;
   }
+
+  .small-card-container{
+    margin: 0px -16px
+  }
+
+  .small-card-container .vertical-container{
+    padding: 0px;
+  }
+
+  
+
 }
 
 
@@ -1602,10 +1673,7 @@ transform: scaleX(-1);
   nav .right-container .toolbar {
     gap: 1rem;
   }
-  /* nav .store-img {
-    margin-left: 20px;
-    margin-right: 1.5rem;
-  } */
+ 
   nav .tab-container .support-text {
     padding: 10px 16px;
   }
