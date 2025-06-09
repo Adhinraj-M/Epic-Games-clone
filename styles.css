@@ -748,7 +748,7 @@ main {
   justify-content: center;
   align-items: center;
   text-align: center;
-  font-weight: 500;
+  font-weight: 400;
   color: #fff;
   font-size: 16px;
 }
@@ -1048,6 +1048,29 @@ main {
 
 .small-card-container .vertical-container:last-child{
   border: none;
+}
+
+.on-epic-btn{
+  display: flex;
+  padding: 3px 8px ;
+  background-color: rgba(255, 255, 255, 0.15);
+  border-radius: 4px;
+  border: none;
+  color: rgb(255, 255, 255);
+  font-size: 0.75rem;
+  line-height: 150%;
+  font-family: 'epic-font';
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  width: fit-content;
+}
+
+.mb-15{
+  margin-bottom: 15px;
+}
+
+.crown-img{
+  background-image: url(	data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhl…zIDEwLjE1NjRaIiBmaWxsPSIjRkZEMTVDIi8+Cjwvc3ZnPgo=);
 }
 
 /* tablet screen  */
