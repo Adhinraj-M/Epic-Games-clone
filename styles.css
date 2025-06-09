@@ -89,7 +89,7 @@ header .logo-btn .down-arrow-svg {
   justify-content: space-between;
 }
 
-nav .store-img {
+.store-img {
   height: 1.75rem;
   width: auto;
   row-gap: 2rem;
@@ -1068,14 +1068,175 @@ main {
 .mb-15{
   margin-bottom: 15px;
 }
-
+/* 
 .crown-img{
   background-image: url(	data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhl…zIDEwLjE1NjRaIiBmaWxsPSIjRkZEMTVDIi8+Cjwvc3ZnPgo=);
+} */
+
+.last-container{
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  padding-top: 24px;
+  margin-top:24px;
+  padding-bottom: 90px;
+}
+
+.last-text{
+   font-family: 'epic-font';
+  color: rgb(255, 255, 255);
+  font-size: 0.75rem;
+  line-height: 150%;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  
+}
+
+.footer-container{
+  padding-inline: 1rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  font-family: 'epic-font';
+  padding-block: 5rem;
+  box-sizing: border-box;
+  background: rgb(24, 24, 28);
+  color: rgba(255, 255, 255, 0.65);
+}
+
+.first-section{
+  flex-direction: column;
+  gap: 2.5rem;
+  align-items: center;
+  justify-content: space-between;
+  display: flex;
+}
+
+.social-media-container{
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: 1rem;
+}
+
+.social-media{
+  height: 1.75rem;
+  width: 1.75rem;
+
+}
+
+.store-img-footer{
+  height: 32px;
+  width: 54px;
+  display: block;
+}
+
+.second-section{
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  flex-wrap:wrap ;
+  row-gap: 0;
+  border-bottom: 1px solid rgba(255, 255, 255, .15);
+}
+
+
+
+.footer-links-mobile{
+  display: flex;
+  padding-block: 1.25rem;
+  border: 0;
+  border-top: 1px solid rgba(255, 255, 255, .15);
+  background: transparent;
+  color: rgba(255, 255, 255, 0.65);
+  padding-inline: 0px;
+  justify-content: space-between;
+}
+
+.footer-links-mobile .footer-link-heading{
+  font-family: 'epic-font';
+  font-weight: 700;
+  font-size: 1.25rem;
+  letter-spacing: -0.3px;
+  line-height: 100%;
+  margin: 0;
+  padding: 0;
+  color: #ffffff;
+}
+
+.footer-down-svg{
+  height: 1.25rem;
+  width:1.25rem ;
+  fill: #fff;
+
+}
+
+.border-top{
+  border-top: 1px solid rgba(255, 255, 255, .15) ;
+}
+
+.copyright{
+  text-align: center;
+  font-size: 0.75rem;
+  font-family: 'epic-font';
+  line-height: 150%;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+}
+
+.bottom-link{
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 1.5rem;
+  row-gap: 0.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  top: 1px;
+}
+
+.bottom-link .link-text{
+  font-family: 'epic-font';
+  font-weight: 400;
+  line-height: 150%;
+  font-size: 0.75rem;
+  letter-spacing: 0.02em;
+  min-height: 1.25rem;
+}
+
+.to-top-btn{
+  height: 3rem;
+  padding: 0.75rem 1.25rem;
+  border: 0;
+  font-family: 'epic-font';
+  font-weight: 400;
+  line-height: 150%;
+  font-size: 0.875rem;
+  letter-spacing: 0.02em;
+  box-sizing: border-box;
+  gap: 8px;
+  border-radius: .5rem;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  align-items: center;
+  color: #fff;
+  flex-shrink: 0;
+  background-color: rgba(255, 255, 255, 0.15);
+  width: 146.66px;
+  
+}
+
+.top-svg{
+  max-width: 1.25rem;
+  max-height: 1.25rem;
 }
 
 /* tablet screen  */
 @media screen and (min-width: 768px) {
-  .mobile-view {
+  .mobile-view,hr,.footer-links-mobile {
     display: none;
   }
   .tab-view {
@@ -1090,7 +1251,7 @@ main {
     padding: 20px 24px;
   }
 
-  nav .store-img {
+ .store-img {
     width: 54px;
     height: 32px;
     margin-right: 0.5rem;
@@ -1525,6 +1686,62 @@ transform: scaleX(-1);
 
 }
 
+.footer-container{
+  padding-inline: 4rem;
+}
+
+.first-section{
+  flex-direction: row;
+}
+
+.second-section{
+  display: flex;
+  flex-direction: row;
+  column-gap: 2em;
+  flex-wrap:wrap ;
+  row-gap: 3rem;
+  border:none;
+  margin-block:2.5rem;
+}
+
+.footer-link-container{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.footer-tab-heading{
+  display: flex;
+  font-family: 'epic-font';
+  font-weight: 700;
+  font-size: 1.25rem;
+  letter-spacing: -.01875rem;
+  line-height: 100%;
+  margin: 0;
+  padding: 0;
+  color: #ffff;
+}
+
+.footer-link-container .content-names{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-link-container .content-names .game-names-list{
+  padding-block: .375rem;
+  width: 100%;
+  min-height: 1.25rem;
+  font-family: 'epic-font';
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    font-size: .875rem;
+    letter-spacing: .02em;
+}
+
 
 }
 
@@ -1625,6 +1842,14 @@ transform: scaleX(-1);
     padding: 0px 16px;
   }
 
+.last-container{
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  padding-top: 24px;
+  margin-top:24px;
+  padding-bottom: 90px;
+  width: 75%;
+  margin-inline: auto;
+}
 
 
 
@@ -1637,7 +1862,7 @@ transform: scaleX(-1);
     column-gap: 1.75rem;
   }
 
-  nav .store-img {
+ .store-img {
       margin-right: 1.5rem;
   }
 
